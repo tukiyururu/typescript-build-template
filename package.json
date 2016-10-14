@@ -1,0 +1,27 @@
+{
+  "name": "typescript-build-template",
+  "version": "0.0.1",
+  "description": "typescript build template",
+  "main": "dist/scripts.js",
+  "scripts": {
+    "start": "node dist/scripts.js",
+    "build": "webpack -p",
+    "debug": "webpack -p && node dist/scripts.js",
+    "watch": "chokidar \"src/*.ts\" -c \"npm run -s debug\"",
+    "server": "webpack-dev-server --inline --hot --colors",
+    "clean": "rm -Rf dist/*.js"
+  },
+  "keywords": [],
+  "author": "tukiyururu",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-core": "^6.17.0",
+    "babel-loader": "^6.2.5",
+    "babel-preset-es2015": "^6.16.0",
+    "chokidar-cli": "^1.2.0",
+    "ts-loader": "^0.9.1",
+    "typescript": "^2.0.3",
+    "webpack": "^1.13.2",
+    "webpack-dev-server": "^1.16.2"
+  }
+}
