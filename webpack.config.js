@@ -1,12 +1,11 @@
 var path = require('path');
 
 module.exports = {
-    context: path.join(__dirname, 'src'),
     entry: {
-        scripts: './scripts.ts'
+        scripts: './src/scripts.ts'
     },
     output: {
-        path: path.join(__dirname, 'dist'),
+        path: path.resolve(__dirname, 'dist'),
         filename: '[name].js'
     },
     devServer: {
