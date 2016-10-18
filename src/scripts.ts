@@ -1,4 +1,9 @@
-class Hello {
+interface IHello {
+    getName(): string;
+    greeting(msg: string): string;
+}
+
+class Hello implements IHello {
     constructor(private name: string) {
     }
 
@@ -17,13 +22,10 @@ class Bye extends Hello {
     }
 }
 
-
-const hello: Hello = new Hello('Yururu');
+const hello: IHello = new Hello('Yururu');
 const h: string = hello.greeting('Yeah!');
 alert(h);
-// console.log(h);
 
-const bye: Bye = new Bye('Honoruru');
-const b: string = bye.greeting('( ˘ω˘)ｽﾔｧ...');
+const bye: IHello = new Bye('Honoruru');
+const b: string = bye.greeting('( ˘ω˘)ｽﾔｧ・・・');
 alert(b);
-// console.log(b);
